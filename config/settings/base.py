@@ -87,10 +87,12 @@ THIRD_PARTY_APPS = [
     "rest_framework.authtoken",
     "corsheaders",
     "drf_spectacular",
+    "django_socio_grpc",
 ]
 
 LOCAL_APPS = [
     "meuestoque_replacement.users",
+    'meuestoque_replacement.replacements'
     # Your stuff: custom apps go here
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
