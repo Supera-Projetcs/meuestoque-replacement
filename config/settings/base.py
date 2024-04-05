@@ -87,10 +87,12 @@ THIRD_PARTY_APPS = [
     "rest_framework.authtoken",
     "corsheaders",
     "drf_spectacular",
+    "django_socio_grpc",
 ]
 
 LOCAL_APPS = [
     "meuestoque_replacement.users",
+    'meuestoque_replacement.replacements'
     # Your stuff: custom apps go here
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
@@ -304,6 +306,10 @@ REST_FRAMEWORK = {
     ),
     "DEFAULT_PERMISSION_CLASSES": ("rest_framework.permissions.IsAuthenticated",),
     "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
+}
+
+GRPC_FRAMEWORK = {
+    "ROOT_HANDLERS_HOOK": 'meuestoque_replacement.replacements.handlers.grpc_handlers',
 }
 
 # django-cors-headers - https://github.com/adamchainz/django-cors-headers#setup
