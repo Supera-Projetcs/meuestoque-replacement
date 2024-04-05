@@ -2,7 +2,7 @@ from django.db import models
 
 
 class PedidoReposicao(models.Model):
-    produto = models.CharField(max_length=100)
+    produto = models.IntegerField()
     quantidade = models.PositiveIntegerField()
     fornecedor = models.CharField(max_length=100)
     data_pedido = models.DateField(auto_now_add=True)

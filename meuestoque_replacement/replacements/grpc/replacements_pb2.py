@@ -15,27 +15,31 @@ _sym_db = _symbol_database.Default()
 from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n;meuestoque_replacement/replacements/grpc/replacements.proto\x12\x13\x63onfig.replacements\x1a\x1bgoogle/protobuf/empty.proto\"\'\n\x19ReplacementDestroyRequest\x12\n\n\x02id\x18\x01 \x01(\x05\"\x18\n\x16ReplacementListRequest\"c\n\x17ReplacementListResponse\x12\x39\n\x07results\x18\x01 \x03(\x0b\x32(.config.replacements.ReplacementResponse\x12\r\n\x05\x63ount\x18\x02 \x01(\x05\"\x96\x01\n\x1fReplacementPartialUpdateRequest\x12\n\n\x02id\x18\x01 \x01(\x05\x12\x1e\n\x16_partial_update_fields\x18\x02 \x03(\t\x12\x0f\n\x07produto\x18\x03 \x01(\t\x12\x12\n\nquantidade\x18\x04 \x01(\x05\x12\x12\n\nfornecedor\x18\x05 \x01(\t\x12\x0e\n\x06status\x18\x06 \x01(\t\"i\n\x12ReplacementRequest\x12\n\n\x02id\x18\x01 \x01(\x05\x12\x0f\n\x07produto\x18\x02 \x01(\t\x12\x12\n\nquantidade\x18\x03 \x01(\x05\x12\x12\n\nfornecedor\x18\x04 \x01(\t\x12\x0e\n\x06status\x18\x05 \x01(\t\"\x7f\n\x13ReplacementResponse\x12\n\n\x02id\x18\x01 \x01(\x05\x12\x0f\n\x07produto\x18\x02 \x01(\t\x12\x12\n\nquantidade\x18\x03 \x01(\x05\x12\x12\n\nfornecedor\x18\x04 \x01(\t\x12\x13\n\x0b\x64\x61ta_pedido\x18\x05 \x01(\t\x12\x0e\n\x06status\x18\x06 \x01(\t\"(\n\x1aReplacementRetrieveRequest\x12\n\n\x02id\x18\x01 \x01(\x05\x32\xeb\x04\n\x15ReplacementController\x12]\n\x06\x43reate\x12\'.config.replacements.ReplacementRequest\x1a(.config.replacements.ReplacementResponse\"\x00\x12S\n\x07\x44\x65stroy\x12..config.replacements.ReplacementDestroyRequest\x1a\x16.google.protobuf.Empty\"\x00\x12\x63\n\x04List\x12+.config.replacements.ReplacementListRequest\x1a,.config.replacements.ReplacementListResponse\"\x00\x12q\n\rPartialUpdate\x12\x34.config.replacements.ReplacementPartialUpdateRequest\x1a(.config.replacements.ReplacementResponse\"\x00\x12g\n\x08Retrieve\x12/.config.replacements.ReplacementRetrieveRequest\x1a(.config.replacements.ReplacementResponse\"\x00\x12]\n\x06Update\x12\'.config.replacements.ReplacementRequest\x1a(.config.replacements.ReplacementResponse\"\x00\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n;meuestoque_replacement/replacements/grpc/replacements.proto\x12\x13\x63onfig.replacements\x1a\x1bgoogle/protobuf/empty.proto\"@\n\x19\x44\x61shmost_replacedResponse\x12\x0f\n\x07produto\x18\x01 \x01(\x05\x12\x12\n\nquantidade\x18\x02 \x01(\x05\"\'\n\x19ReplacementDestroyRequest\x12\n\n\x02id\x18\x01 \x01(\x05\"\x18\n\x16ReplacementListRequest\"c\n\x17ReplacementListResponse\x12\x39\n\x07results\x18\x01 \x03(\x0b\x32(.config.replacements.ReplacementResponse\x12\r\n\x05\x63ount\x18\x02 \x01(\x05\"\x96\x01\n\x1fReplacementPartialUpdateRequest\x12\n\n\x02id\x18\x01 \x01(\x05\x12\x1e\n\x16_partial_update_fields\x18\x02 \x03(\t\x12\x0f\n\x07produto\x18\x03 \x01(\x05\x12\x12\n\nquantidade\x18\x04 \x01(\x05\x12\x12\n\nfornecedor\x18\x05 \x01(\t\x12\x0e\n\x06status\x18\x06 \x01(\t\"i\n\x12ReplacementRequest\x12\n\n\x02id\x18\x01 \x01(\x05\x12\x0f\n\x07produto\x18\x02 \x01(\x05\x12\x12\n\nquantidade\x18\x03 \x01(\x05\x12\x12\n\nfornecedor\x18\x04 \x01(\t\x12\x0e\n\x06status\x18\x05 \x01(\t\"\x7f\n\x13ReplacementResponse\x12\n\n\x02id\x18\x01 \x01(\x05\x12\x0f\n\x07produto\x18\x02 \x01(\x05\x12\x12\n\nquantidade\x18\x03 \x01(\x05\x12\x12\n\nfornecedor\x18\x04 \x01(\t\x12\x13\n\x0b\x64\x61ta_pedido\x18\x05 \x01(\t\x12\x0e\n\x06status\x18\x06 \x01(\t\"(\n\x1aReplacementRetrieveRequest\x12\n\n\x02id\x18\x01 \x01(\x05\x32k\n\x0e\x44\x61shController\x12Y\n\rmost_replaced\x12\x16.google.protobuf.Empty\x1a..config.replacements.Dashmost_replacedResponse\"\x00\x32\xeb\x04\n\x15ReplacementController\x12]\n\x06\x43reate\x12\'.config.replacements.ReplacementRequest\x1a(.config.replacements.ReplacementResponse\"\x00\x12S\n\x07\x44\x65stroy\x12..config.replacements.ReplacementDestroyRequest\x1a\x16.google.protobuf.Empty\"\x00\x12\x63\n\x04List\x12+.config.replacements.ReplacementListRequest\x1a,.config.replacements.ReplacementListResponse\"\x00\x12q\n\rPartialUpdate\x12\x34.config.replacements.ReplacementPartialUpdateRequest\x1a(.config.replacements.ReplacementResponse\"\x00\x12g\n\x08Retrieve\x12/.config.replacements.ReplacementRetrieveRequest\x1a(.config.replacements.ReplacementResponse\"\x00\x12]\n\x06Update\x12\'.config.replacements.ReplacementRequest\x1a(.config.replacements.ReplacementResponse\"\x00\x62\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'meuestoque_replacement.replacements.grpc.replacements_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
   DESCRIPTOR._options = None
-  _globals['_REPLACEMENTDESTROYREQUEST']._serialized_start=113
-  _globals['_REPLACEMENTDESTROYREQUEST']._serialized_end=152
-  _globals['_REPLACEMENTLISTREQUEST']._serialized_start=154
-  _globals['_REPLACEMENTLISTREQUEST']._serialized_end=178
-  _globals['_REPLACEMENTLISTRESPONSE']._serialized_start=180
-  _globals['_REPLACEMENTLISTRESPONSE']._serialized_end=279
-  _globals['_REPLACEMENTPARTIALUPDATEREQUEST']._serialized_start=282
-  _globals['_REPLACEMENTPARTIALUPDATEREQUEST']._serialized_end=432
-  _globals['_REPLACEMENTREQUEST']._serialized_start=434
-  _globals['_REPLACEMENTREQUEST']._serialized_end=539
-  _globals['_REPLACEMENTRESPONSE']._serialized_start=541
-  _globals['_REPLACEMENTRESPONSE']._serialized_end=668
-  _globals['_REPLACEMENTRETRIEVEREQUEST']._serialized_start=670
-  _globals['_REPLACEMENTRETRIEVEREQUEST']._serialized_end=710
-  _globals['_REPLACEMENTCONTROLLER']._serialized_start=713
-  _globals['_REPLACEMENTCONTROLLER']._serialized_end=1332
+  _globals['_DASHMOST_REPLACEDRESPONSE']._serialized_start=113
+  _globals['_DASHMOST_REPLACEDRESPONSE']._serialized_end=177
+  _globals['_REPLACEMENTDESTROYREQUEST']._serialized_start=179
+  _globals['_REPLACEMENTDESTROYREQUEST']._serialized_end=218
+  _globals['_REPLACEMENTLISTREQUEST']._serialized_start=220
+  _globals['_REPLACEMENTLISTREQUEST']._serialized_end=244
+  _globals['_REPLACEMENTLISTRESPONSE']._serialized_start=246
+  _globals['_REPLACEMENTLISTRESPONSE']._serialized_end=345
+  _globals['_REPLACEMENTPARTIALUPDATEREQUEST']._serialized_start=348
+  _globals['_REPLACEMENTPARTIALUPDATEREQUEST']._serialized_end=498
+  _globals['_REPLACEMENTREQUEST']._serialized_start=500
+  _globals['_REPLACEMENTREQUEST']._serialized_end=605
+  _globals['_REPLACEMENTRESPONSE']._serialized_start=607
+  _globals['_REPLACEMENTRESPONSE']._serialized_end=734
+  _globals['_REPLACEMENTRETRIEVEREQUEST']._serialized_start=736
+  _globals['_REPLACEMENTRETRIEVEREQUEST']._serialized_end=776
+  _globals['_DASHCONTROLLER']._serialized_start=778
+  _globals['_DASHCONTROLLER']._serialized_end=885
+  _globals['_REPLACEMENTCONTROLLER']._serialized_start=888
+  _globals['_REPLACEMENTCONTROLLER']._serialized_end=1507
 # @@protoc_insertion_point(module_scope)

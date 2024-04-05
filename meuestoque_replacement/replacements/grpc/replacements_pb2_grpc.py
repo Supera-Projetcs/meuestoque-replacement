@@ -6,6 +6,67 @@ from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
 from meuestoque_replacement.replacements.grpc import replacements_pb2 as meuestoque__replacement_dot_replacements_dot_grpc_dot_replacements__pb2
 
 
+class DashControllerStub(object):
+    """Missing associated documentation comment in .proto file."""
+
+    def __init__(self, channel):
+        """Constructor.
+
+        Args:
+            channel: A grpc.Channel.
+        """
+        self.most_replaced = channel.unary_unary(
+                '/config.replacements.DashController/most_replaced',
+                request_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
+                response_deserializer=meuestoque__replacement_dot_replacements_dot_grpc_dot_replacements__pb2.Dashmost_replacedResponse.FromString,
+                )
+
+
+class DashControllerServicer(object):
+    """Missing associated documentation comment in .proto file."""
+
+    def most_replaced(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+
+def add_DashControllerServicer_to_server(servicer, server):
+    rpc_method_handlers = {
+            'most_replaced': grpc.unary_unary_rpc_method_handler(
+                    servicer.most_replaced,
+                    request_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+                    response_serializer=meuestoque__replacement_dot_replacements_dot_grpc_dot_replacements__pb2.Dashmost_replacedResponse.SerializeToString,
+            ),
+    }
+    generic_handler = grpc.method_handlers_generic_handler(
+            'config.replacements.DashController', rpc_method_handlers)
+    server.add_generic_rpc_handlers((generic_handler,))
+
+
+ # This class is part of an EXPERIMENTAL API.
+class DashController(object):
+    """Missing associated documentation comment in .proto file."""
+
+    @staticmethod
+    def most_replaced(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/config.replacements.DashController/most_replaced',
+            google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
+            meuestoque__replacement_dot_replacements_dot_grpc_dot_replacements__pb2.Dashmost_replacedResponse.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+
 class ReplacementControllerStub(object):
     """Missing associated documentation comment in .proto file."""
 
