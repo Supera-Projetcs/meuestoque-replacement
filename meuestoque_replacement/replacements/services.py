@@ -22,6 +22,7 @@ class ReplacementService(generics.AsyncModelService):
 
         return serializer.message
 
+
 class DashService(generics.GenericService):
 
     @grpc_action(
@@ -38,7 +39,7 @@ class DashService(generics.GenericService):
     )
     async def most_replaced(self, request, context):
 
-        dash_sync = PedidoReposicao.objects.values("produto").annotate(quantity=Sum("quantidade"))
+        dash_sync = PedidoReposicao.objects.values("produto").annotate(quantity=Sum("quantidade")).order_by("-quantidade")
         dash = await sync_to_async(list)(dash_sync)
 
         response = Dashmost_replacedResponse(produto=dash[0]['produto'], quantidade=dash[0]['quantity'])
